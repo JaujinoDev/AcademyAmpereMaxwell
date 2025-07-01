@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academia Ampere Maxwell</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- ICONOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- AOS ANIMATIONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <!-- TIPOGRAFÍA (Google Fonts) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <img
+          src="assets/images/AMPEREMAXWELL.jpg"
+          alt="Logo Ampere Maxwell"
+          class="logo"
+        />
+        <nav class="navbar">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#ciclos">Ciclos</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <a href="#contacto" class="btn">Inscribirme</a>
+      </div>
+    </header>
+
+    <!-- SECCIONES -->
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-content container">
+          <h1><span id="typed-text"></span><span class="cursor"></span></h1>
+
+          <p>
+            Prepárate con los mejores ciclos preuniversitarios: Semestral,
+            Paralelo y Calichín. Profesores de élite, modalidad virtual y
+            presencial, todo para tu ingreso.
+          </p>
+          <a href="#contacto" class="btn">Inscribirme Ahora</a>
+        </div>
+      </section>
+
+      <section id="beneficios">
+        <section id="beneficios" class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>¿Por qué elegir Ampere Maxwell?</h2>
+            <p>Conoce todo lo que te ofrecemos para lograr tu ingreso</p>
+          </div>
+
+          <div class="benefits-grid">
+            <div class="benefit-card" data-aos="zoom-in">
+              <i class="fas fa-chalkboard-teacher fa-3x"></i>
+              <h3>Profesores Top</h3>
+              <p>
+                Clases dictadas por expertos en su campo, muchos con experiencia
+                universitaria.
+              </p>
+            </div>
+            <div class="benefit-card" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fas fa-laptop-house fa-3x"></i>
+              <h3>Clases Virtuales</h3>
+              <p>
+                Conéctate desde casa y mantén un aprendizaje constante con
+                acceso 24/7.
+              </p>
+            </div>
+            <div class="benefit-card" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fas fa-book-open fa-3x"></i>
+              <h3>Material Actualizado</h3>
+              <p>
+                Accede a material de calidad, simulacros, guías y asesorías
+                personalizadas.
+              </p>
+            </div>
+            <div class="benefit-card" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fas fa-user-shield fa-3x"></i>
+              <h3>Acompañamiento</h3>
+              <p>
+                Seguimiento académico por tutores especializados hasta el día de
+                tu examen.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="ciclos">
+        <!-- Info de ciclos -->
+      </section>
+
+      <section id="testimonios">
+        <!-- Testimonios -->
+      </section>
+
+      <section id="contacto">
+        <!-- Contacto + formulario -->
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2025 Academia Ampere Maxwell. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Duración animación
+        once: false, // Permitir repetir al hacer scroll
+        mirror: true, // Re-anima al volver a subir
+      });
+    </script>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

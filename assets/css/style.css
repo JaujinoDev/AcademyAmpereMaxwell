@@ -1,0 +1,264 @@
+/* Reset general para eliminar márgenes y paddings predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #1B1B1B;
+    line-height: 1.6;
+}
+
+/* Contenedor reutilizable */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Enlaces y botones */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    background: linear-gradient(to right, #7000F0, #FF3C93);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(255, 60, 147, 0.4);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1;
+    transition: height 0.3s ease;
+    opacity: 0.1;
+}
+
+.btn:hover::after {
+    height: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 60, 147, 0.6);
+}
+
+
+/* Navbar */
+.header {
+    background: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 90px;
+    /* antes era 60px */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+
+
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    font-weight: 500;
+    color: #1B1B1B;
+}
+
+/* HERO (presentación principal) */
+.hero {
+    background: #5C00A3;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.svgbackgrounds.com/wp-content/uploads/2021/05/subtle-prism.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.12;
+    z-index: 0;
+    animation: bgMove 30s linear infinite;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.hero .btn {
+    font-size: 1rem;
+}
+
+
+.cursor {
+    display: inline-block;
+    background-color: white;
+    width: 2px;
+    margin-left: 4px;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, #FF2F92 0%, #5C00A3 100%);
+    animation: rotate 20s linear infinite;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1.2);
+    }
+}
+
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.benefit-card {
+  background: linear-gradient(145deg, #f7f7f7, #ffffff);
+  padding: 30px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.07);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid #eee;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(90, 0, 200, 0.15);
+}
+
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+}
+
+.benefit-card i {
+    color: #7000F0;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    font-size: 1.2rem;
+    color: #1B1B1B;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: #5C00A3;
+    font-weight: 700;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 10px;
+}
