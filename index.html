@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Academia Ampere Maxwell</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="icon"
+      href="assets/images/AMPEREMAXWELL.jpg"
+      type="image/x-icon"
+    />
     <!-- ICONOS -->
     <link
       rel="stylesheet"
@@ -16,6 +21,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
 
     <!-- TIPOGRAFÍA (Google Fonts) -->
     <link
@@ -24,6 +34,13 @@
     />
   </head>
   <body>
+    <div id="intro-banner" class="intro-banner">
+      <img src="assets/images/flyer1.jpg" alt="Bienvenido a Ampere Maxwell" />
+      <button id="close-banner" class="close-banner-btn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
     <!-- HEADER -->
     <header class="header">
       <div class="container">
@@ -104,23 +121,218 @@
         </section>
       </section>
 
-      <section id="ciclos">
-        <!-- Info de ciclos -->
+      <section id="ciclos" class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Nuestros Ciclos</h2>
+          <p>Elige el ciclo que se adapte a tu ritmo y objetivo</p>
+        </div>
+
+        <div class="ciclos-grid">
+          <div class="ciclo-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Paralelo</h3>
+            <p class="mod">Modalidad: Presencial / Virtual</p>
+            <p class="duracion"><i class="fas fa-clock"></i> 6 meses</p>
+            <p class="desc">
+              Ideal para estudiantes que cursan 5to y quieren avanzar paralelo a
+              la escuela.
+            </p>
+            <a href="#contacto" class="btn-ciclo">Solicitar Información</a>
+          </div>
+
+          <div class="ciclo-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Semestral</h3>
+            <p class="mod">Modalidad: Presencial / Virtual</p>
+            <p class="duracion"><i class="fas fa-clock"></i> 5 meses</p>
+            <p class="desc">
+              Perfecto para egresados que desean enfocarse completamente en su
+              ingreso.
+            </p>
+            <a href="#contacto" class="btn-ciclo">Solicitar Información</a>
+          </div>
+
+          <div class="ciclo-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Calichín</h3>
+            <p class="mod">Modalidad: Presencial / Virtual</p>
+            <p class="duracion"><i class="fas fa-clock"></i> 3 meses</p>
+            <p class="desc">
+              Preparación rápida con enfoque intensivo y técnica para resolver
+              exámenes.
+            </p>
+            <a href="#contacto" class="btn-ciclo">Solicitar Información</a>
+          </div>
+        </div>
       </section>
 
-      <section id="testimonios">
-        <!-- Testimonios -->
+      <section id="testimonios" class="testimonios-section">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Lo que dicen nuestros estudiantes</h2>
+          <p>Historias reales de éxito con Ampere Maxwell</p>
+        </div>
+
+        <div class="swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide testimonial-card">
+              <p>
+                "Gracias a Ampere Maxwell pude ingresar a la UNI. Sus profesores
+                y simulacros son top."
+              </p>
+              <h4>María Fernanda R.</h4>
+              <span>Estudiante de Ingeniería</span>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide testimonial-card">
+              <p>
+                "Recomendado al 100%. El ciclo semestral me ayudó a reforzar y
+                entender los cursos clave."
+              </p>
+              <h4>Josué A.</h4>
+              <span>Estudiante de Medicina</span>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide testimonial-card">
+              <p>
+                "Agradecido con los tutores, siempre me guiaron en mi proceso.
+                Hoy estudio en San Marcos."
+              </p>
+              <h4>Alejandra T.</h4>
+              <span>Estudiante de Derecho</span>
+            </div>
+          </div>
+
+          <!-- Navegación -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
       </section>
 
-      <section id="contacto">
-        <!-- Contacto + formulario -->
+      <section id="contacto" class="contact-section">
+        <div class="section-title" data-aos="fade-up">
+          <h2>¿Listo para comenzar?</h2>
+          <p>Escríbenos y nos pondremos en contacto contigo a la brevedad</p>
+        </div>
+
+        <div class="contact-container container" data-aos="fade-up">
+          <form class="contact-form" id="form-contacto">
+            <div class="input-group">
+              <label for="nombre">Nombre completo</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                placeholder="Tu nombre"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="correo">Correo electrónico</label>
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                required
+                placeholder="tucorreo@email.com"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="telefono">Teléfono / WhatsApp</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                placeholder="Ej. 987654321"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="mensaje">Mensaje o consulta</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                required
+                placeholder="Escribe aquí tu mensaje..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-contacto">Enviar Mensaje</button>
+          </form>
+
+          <div class="contact-info">
+            <h4>También puedes visitarnos</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Jr. Tupac Amaru 123,
+              Huancayo
+            </p>
+            <p><i class="fas fa-phone-alt"></i> +51 987 654 321</p>
+            <p><i class="fas fa-envelope"></i> contacto@amperemaxwell.pe</p>
+            <p><i class="fas fa-clock"></i> Lunes a Sábado: 8:00 - 18:00</p>
+          </div>
+        </div>
       </section>
     </main>
 
+    <section class="cta-section" data-aos="zoom-in">
+      <div class="cta-container container">
+        <h2>¿Listo para asegurar tu ingreso?</h2>
+        <p>
+          Únete a Ampere Maxwell y prepárate con los mejores. Comienza hoy tu
+          camino al éxito.
+        </p>
+        <a href="https://wa.me/51987654321" target="_blank" class="cta-button">
+          Escríbeme por WhatsApp
+        </a>
+      </div>
+    </section>
+
     <!-- FOOTER -->
-    <footer class="footer">
-      <p>&copy; 2025 Academia Ampere Maxwell. Todos los derechos reservados.</p>
+    <footer class="footer-section">
+      <div class="container footer-content">
+        <div class="footer-logo">
+          <img
+            src="assets/images/AMPEREMAXWELL.jpg"
+            alt="Ampere Maxwell Logo"
+          />
+          <p>&copy; 2025 Ampere Maxwell. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#ciclos">Ciclos</a>
+          <a href="#testimonios">Testimonios</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+
+        <div class="footer-social">
+          <a
+            href="https://wa.me/51987654321"
+            target="_blank"
+            aria-label="WhatsApp"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://facebook.com/tuacademia"
+            target="_blank"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://youtube.com/@tuacademia"
+            target="_blank"
+            aria-label="YouTube"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({
@@ -131,5 +343,23 @@
     </script>
 
     <script src="assets/js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
