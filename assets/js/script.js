@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.getElementById("close-banner");
 
     closeBtn.addEventListener("click", () => {
-        banner.style.display = "none";
+        banner.classList.add("fade-out");
+        setTimeout(() => {
+            banner.style.display = "none";
+        }, 600); // tiempo igual al de la animación
     });
 });
 

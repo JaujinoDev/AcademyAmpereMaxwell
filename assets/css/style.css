@@ -649,3 +649,32 @@ section {
         opacity: 1;
     }
 }
+
+/* Clase que se aplicará al cerrar */
+.intro-banner.fade-out {
+    animation: fadeOutZoom 0.6s ease forwards;
+}
+
+/* Animación de salida */
+@keyframes fadeOutZoom {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.hero-floating-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+}
