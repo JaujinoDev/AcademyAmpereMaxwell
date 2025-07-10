@@ -63,38 +63,140 @@ a {
 
 
 /* Navbar */
+/* HEADER PRINCIPAL */
 .header {
-    background: #ffffff;
-    padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 12px 0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 999;
 }
 
-.header .container {
+/* LOGO */
+.logo {
+    height: 55px;
+}
+
+/* CONTAINER FLEX */
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    height: 60px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
-
-
-}
-
-.navbar ul {
-    list-style: none;
+/* NAVBAR */
+.navbar {
     display: flex;
-    gap: 25px;
+    align-items: center;
+    gap: 20px;
 }
 
-.navbar a {
-    font-weight: 500;
-    color: #1B1B1B;
+/* ENLACES */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
+
+.nav-links li a {
+    font-weight: 600;
+    color: #1B1B1B;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #FF3C93;
+}
+
+/* BOTÓN INSCRIBIRSE */
+.inscribirse-btn {
+    background: linear-gradient(to right, #7000F0, #FF3C93);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 60, 147, 0.4);
+}
+
+.inscribirse-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 60, 147, 0.6);
+    background: linear-gradient(to right, #FF3C93, #7000F0);
+}
+
+/* HAMBURGUER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: #1B1B1B;
+    height: 3px;
+    border-radius: 2px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        display: none;
+        z-index: 998;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 8px 0;
+        border-top: 1px solid #eee;
+        text-align: center;
+        transition: background 0.3s ease;
+    }
+
+    .nav-links li:hover {
+        background-color: #FFE3F0;
+        /* color suave rosado */
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .nav-links li:hover a {
+        color: #7000F0;
+        font-weight: 600;
+    }
+
+
+
+    .hamburger {
+        display: flex;
+    }
+
+    .inscribirse-btn {
+        display: none;
+    }
+}
+
+
 
 /* HERO (presentación principal) */
 .hero {

@@ -43,29 +43,39 @@
 
     <!-- HEADER -->
     <header class="header">
-      <div class="container">
-        <img
-          src="assets/images/AMPEREMAXWELL.jpg"
-          alt="Logo Ampere Maxwell"
-          class="logo"
-        />
+      <div class="container header-container">
+        <a href="#" class="logo-link">
+          <img
+            src="assets/images/AMPEREMAXWELL.jpg"
+            alt="Ampere Maxwell"
+            class="logo"
+          />
+        </a>
+
         <nav class="navbar">
-          <ul>
+          <ul class="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#beneficios">Beneficios</a></li>
             <li><a href="#ciclos">Ciclos</a></li>
             <li><a href="#testimonios">Testimonios</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
+          <a href="#contacto" class="btn inscribirse-btn">Inscribirse</a>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
         </nav>
-        <a href="#contacto" class="btn">Inscribirme</a>
       </div>
     </header>
 
     <!-- SECCIONES -->
     <main>
       <section id="inicio" class="hero">
-        <img src="assets/images/flyer2.jpg" class="hero-floating-image" alt="Imagen decorativa" />
+        <img
+          src="assets/images/flyer2.jpg"
+          class="hero-floating-image"
+          alt="Imagen decorativa"
+        />
         <div class="hero-content container">
           <h1><span id="typed-text"></span><span class="cursor"></span></h1>
 
@@ -297,7 +307,7 @@
       <div class="container footer-content">
         <div class="footer-logo">
           <img
-            src="assets/images/AMPEREMAXWELL.jpg"
+            src="assets/images/AMPEREMAXWELL-removebg-preview.png"
             alt="Ampere Maxwell Logo"
           />
           <p>&copy; 2025 Ampere Maxwell. Todos los derechos reservados.</p>
@@ -343,6 +353,25 @@
       });
     </script>
 
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      const navItems = document.querySelectorAll(".nav-links a");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+
+      // Cierra el menú al hacer clic en cualquier enlace
+      navItems.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (navLinks.classList.contains("show")) {
+            navLinks.classList.remove("show");
+          }
+        });
+      });
+    </script>
+
     <script src="assets/js/script.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -350,7 +379,7 @@
       const swiper = new Swiper(".swiper", {
         loop: true,
         autoplay: {
-          delay: 5000,
+          delay: 10000,
         },
         pagination: {
           el: ".swiper-pagination",
