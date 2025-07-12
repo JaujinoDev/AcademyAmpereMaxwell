@@ -11,19 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Efecto máquina de escribir
 
-const text = "¡Tu futuro comienza hoy en Ampere Maxwell!";
-let index = 0;
-const speed = 70;
-
-function typeWriter() {
-    if (index < text.length) {
-        document.getElementById("typed-text").textContent += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, speed);
-    }
-}
 
 window.onload = typeWriter;
 
@@ -45,4 +33,42 @@ document.getElementById('form-contacto').addEventListener('submit', function (e)
     alert('¡Mensaje enviado correctamente! (Funcionalidad pendiente)');
 });
 
+// Slider automático
+const slides = document.querySelectorAll(".slide");
+let idx = 0;
+setInterval(() => {
+    slides[idx].classList.remove("active");
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add("active");
+}, 5000);
+
+// Máquina de escribir
+const textos = [
+    "Prepárate para alcanzar tus sueños",
+    "Educación moderna, virtual y presencial",
+    "Tu ingreso universitario comienza aquí",
+    "Formamos líderes del futuro"
+];
+
+let currentIndex = 0;
+const typedText = document.getElementById("typed-text");
+
+function typeWriter(text, i = 0) {
+    if (i < text.length) {
+        typedText.textContent += text.charAt(i);
+        setTimeout(() => typeWriter(text, i + 1), 70);
+    }
+}
+
+function startTypingLoop() {
+    typedText.textContent = ""; // Limpiar texto anterior
+    const currentText = textos[currentIndex];
+    typeWriter(currentText);
+    currentIndex = (currentIndex + 1) % textos.length;
+}
+
+window.addEventListener("load", () => {
+    startTypingLoop();                         // Primer mensaje
+    setInterval(startTypingLoop, 10000);       // Cada 10 segundos
+});
 

@@ -21,6 +21,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -70,153 +74,261 @@
 
     <!-- SECCIONES -->
     <main>
-      <section id="inicio" class="hero">
-        <img
-          src="assets/images/flyer2.jpg"
-          class="hero-floating-image"
-          alt="Imagen decorativa"
-        />
-        <div class="hero-content container">
-          <h1><span id="typed-text"></span><span class="cursor"></span></h1>
+      <section class="hero" id="inicio">
+        <div class="hero-slider">
+          <div
+            class="slide active"
+            style="background-image: url('assets/images/flyer1.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('assets/images/flyer2.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('assets/images/AMPEREMAXWELL.jpg')"
+          ></div>
+        </div>
 
-          <p>
-            Prepárate con los mejores ciclos preuniversitarios: Semestral,
-            Paralelo y Calichín. Profesores de élite, modalidad virtual y
-            presencial, todo para tu ingreso.
-          </p>
-          <a href="#contacto" class="btn">Inscribirme Ahora</a>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content container">
+          <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
+          <p>Con clases presenciales o virtuales diseñadas para tu éxito.</p>
+          <a href="#contacto" class="btn">Quiero inscribirme</a>
         </div>
       </section>
 
-      <section id="beneficios">
-        <section id="beneficios" class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>¿Por qué elegir Ampere Maxwell?</h2>
-            <p>Conoce todo lo que te ofrecemos para lograr tu ingreso</p>
+      <section class="benefits-section container" id="beneficios">
+        <div class="section-title">
+          <h2>¿Por qué elegirnos?</h2>
+          <p>
+            Conoce los beneficios que hacen de Ampere Maxwell tu mejor elección.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card" data-aos="fade-up">
+            <img
+              src="https://www.svgrepo.com/show/492612/teacher.svg"
+              alt="Docentes"
+              class="benefit-icon"
+            />
+            <h3>Docentes Destacados</h3>
+            <p>
+              Profesionales con experiencia real y metodología clara, moderna y
+              cercana al estudiante.
+            </p>
           </div>
 
-          <div class="benefits-grid">
-            <div class="benefit-card" data-aos="zoom-in">
-              <i class="fas fa-chalkboard-teacher fa-3x"></i>
-              <h3>Profesores Top</h3>
-              <p>
-                Clases dictadas por expertos en su campo, muchos con experiencia
-                universitaria.
-              </p>
-            </div>
-            <div class="benefit-card" data-aos="zoom-in" data-aos-delay="100">
-              <i class="fas fa-laptop-house fa-3x"></i>
-              <h3>Clases Virtuales</h3>
-              <p>
-                Conéctate desde casa y mantén un aprendizaje constante con
-                acceso 24/7.
-              </p>
-            </div>
-            <div class="benefit-card" data-aos="zoom-in" data-aos-delay="200">
-              <i class="fas fa-book-open fa-3x"></i>
-              <h3>Material Actualizado</h3>
-              <p>
-                Accede a material de calidad, simulacros, guías y asesorías
-                personalizadas.
-              </p>
-            </div>
-            <div class="benefit-card" data-aos="zoom-in" data-aos-delay="300">
-              <i class="fas fa-user-shield fa-3x"></i>
-              <h3>Acompañamiento</h3>
-              <p>
-                Seguimiento académico por tutores especializados hasta el día de
-                tu examen.
-              </p>
-            </div>
+          <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="https://www.svgrepo.com/show/435574/computer.svg"
+              alt="Plataforma"
+              class="benefit-icon"
+            />
+            <h3>Plataforma Virtual Moderna</h3>
+            <p>
+              Accede a clases grabadas, materiales y evaluaciones desde
+              cualquier lugar.
+            </p>
           </div>
-        </section>
+
+          <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="https://www.svgrepo.com/show/435289/plan.svg"
+              alt="Asesoría"
+              class="benefit-icon"
+            />
+            <h3>Asesoría Personalizada</h3>
+            <p>
+              Seguimiento constante a cada alumno por parte de nuestros docentes
+              y tutores.
+            </p>
+          </div>
+
+          <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+            <img
+              src="https://www.svgrepo.com/show/493472/quiz.svg"
+              alt="Simulacros"
+              class="benefit-icon"
+            />
+            <h3>Simulacros Semanales</h3>
+            <p>
+              Prepara tu mente con pruebas similares a los exámenes reales de
+              admisión.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section id="ciclos" class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>Nuestros Ciclos</h2>
-          <p>Elige el ciclo que se adapte a tu ritmo y objetivo</p>
+      <section class="ciclos-section container" id="ciclos">
+        <div class="section-title">
+          <h2>Nuestros Ciclos Académicos</h2>
+          <p>
+            Elige el ciclo que se adapta a tus necesidades académicas y metas
+            personales.
+          </p>
         </div>
 
         <div class="ciclos-grid">
-          <div class="ciclo-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>Paralelo</h3>
-            <p class="mod">Modalidad: Presencial / Virtual</p>
-            <p class="duracion"><i class="fas fa-clock"></i> 6 meses</p>
-            <p class="desc">
-              Ideal para estudiantes que cursan 5to y quieren avanzar paralelo a
-              la escuela.
-            </p>
-            <a href="#contacto" class="btn-ciclo">Solicitar Información</a>
+          <div class="ciclo-card" data-aos="zoom-in">
+            <h3>Ciclo Verano</h3>
+            <div class="mod">Modalidad: Presencial y Virtual</div>
+            <div class="duracion">Duración: Enero - Marzo</div>
+            <div class="desc">
+              Ideal para estudiantes que quieren comenzar el año con ventaja
+              competitiva.
+            </div>
+            <a href="#" class="btn-ciclo">Más información</a>
           </div>
 
-          <div class="ciclo-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>Semestral</h3>
-            <p class="mod">Modalidad: Presencial / Virtual</p>
-            <p class="duracion"><i class="fas fa-clock"></i> 5 meses</p>
-            <p class="desc">
-              Perfecto para egresados que desean enfocarse completamente en su
-              ingreso.
-            </p>
-            <a href="#contacto" class="btn-ciclo">Solicitar Información</a>
+          <div class="ciclo-card" data-aos="zoom-in" data-aos-delay="100">
+            <h3>Ciclo Ordinario</h3>
+            <div class="mod">Modalidad: Virtual</div>
+            <div class="duracion">Duración: Abril - Julio</div>
+            <div class="desc">
+              Enfocado en el desarrollo progresivo de habilidades y
+              conocimientos clave.
+            </div>
+            <a href="#" class="btn-ciclo">Más información</a>
           </div>
 
-          <div class="ciclo-card" data-aos="fade-up" data-aos-delay="300">
-            <h3>Calichín</h3>
-            <p class="mod">Modalidad: Presencial / Virtual</p>
-            <p class="duracion"><i class="fas fa-clock"></i> 3 meses</p>
-            <p class="desc">
-              Preparación rápida con enfoque intensivo y técnica para resolver
-              exámenes.
-            </p>
-            <a href="#contacto" class="btn-ciclo">Solicitar Información</a>
+          <div class="ciclo-card" data-aos="zoom-in" data-aos-delay="200">
+            <h3>Ciclo Repaso</h3>
+            <div class="mod">Modalidad: Intensivo Presencial</div>
+            <div class="duracion">Duración: Agosto - Octubre</div>
+            <div class="desc">
+              Preparación intensiva para los exámenes de admisión más exigentes.
+            </div>
+            <a href="#" class="btn-ciclo">Más información</a>
           </div>
         </div>
       </section>
 
-      <section id="testimonios" class="testimonios-section">
-        <div class="section-title" data-aos="fade-up">
+      <section class="testimonios-section" id="testimonios">
+        <div class="section-title">
           <h2>Lo que dicen nuestros estudiantes</h2>
-          <p>Historias reales de éxito con Ampere Maxwell</p>
+          <p>Testimonios reales de alumnos que confiaron en nosotros</p>
         </div>
 
-        <div class="swiper" data-aos="fade-up">
+        <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide testimonial-card">
+            <!-- Testimonio 1 -->
+            <div class="swiper-slide testimonial-card" data-aos="fade-up">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Estudiante 1"
+                class="testimonial-photo"
+              />
               <p>
-                "Gracias a Ampere Maxwell pude ingresar a la UNI. Sus profesores
-                y simulacros son top."
+                "Gracias a Ampere Maxwell ingresé a la universidad que soñaba.
+                Sus clases virtuales son muy claras y completas."
               </p>
-              <h4>María Fernanda R.</h4>
-              <span>Estudiante de Ingeniería</span>
+              <h4>María Rodríguez</h4>
+              <span>Exalumna - Derecho UNMSM</span>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="swiper-slide testimonial-card">
+            <!-- Testimonio 2 -->
+            <div
+              class="swiper-slide testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="https://randomuser.me/api/portraits/men/33.jpg"
+                alt="Estudiante 2"
+                class="testimonial-photo"
+              />
               <p>
-                "Recomendado al 100%. El ciclo semestral me ayudó a reforzar y
-                entender los cursos clave."
+                "Los simulacros y el seguimiento me ayudaron a mantenerme
+                enfocado todo el ciclo."
               </p>
-              <h4>Josué A.</h4>
-              <span>Estudiante de Medicina</span>
+              <h4>Juan Pérez</h4>
+              <span>Exalumno - Ingeniería UNI</span>
             </div>
 
-            <!-- Slide 3 -->
-            <div class="swiper-slide testimonial-card">
+            <!-- Testimonio 3 -->
+            <div
+              class="swiper-slide testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Estudiante 3"
+                class="testimonial-photo"
+              />
               <p>
-                "Agradecido con los tutores, siempre me guiaron en mi proceso.
-                Hoy estudio en San Marcos."
+                "Lo mejor es la calidad de docentes y el acompañamiento
+                personalizado."
               </p>
-              <h4>Alejandra T.</h4>
-              <span>Estudiante de Derecho</span>
+              <h4>Lucía Torres</h4>
+              <span>Exalumna - Medicina UNMSM</span>
+            </div>
+
+            <!-- Testimonio 4 -->
+            <div
+              class="swiper-slide testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                alt="Estudiante 4"
+                class="testimonial-photo"
+              />
+              <p>
+                "Me gustó mucho el enfoque práctico y las clases grabadas que
+                pude repasar cuando necesitaba."
+              </p>
+              <h4>Carlos Gutiérrez</h4>
+              <span>Exalumno - Arquitectura PUCP</span>
+            </div>
+
+            <!-- Testimonio 5 -->
+            <div
+              class="swiper-slide testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <img
+                src="https://randomuser.me/api/portraits/women/53.jpg"
+                alt="Estudiante 5"
+                class="testimonial-photo"
+              />
+              <p>
+                "La plataforma online y las tutorías personalizadas me dieron la
+                confianza para postular."
+              </p>
+              <h4>Andrea Paredes</h4>
+              <span>Exalumna - Psicología UNSA</span>
+            </div>
+
+            <!-- Testimonio 6 -->
+            <div
+              class="swiper-slide testimonial-card"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <img
+                src="https://randomuser.me/api/portraits/men/21.jpg"
+                alt="Estudiante 6"
+                class="testimonial-photo"
+              />
+              <p>
+                "El ambiente motivador y el compromiso de los docentes me
+                impulsaron a dar lo mejor de mí."
+              </p>
+              <h4>José Luis Vargas</h4>
+              <span>Exalumno - Economía UNALM</span>
             </div>
           </div>
 
-          <!-- Navegación -->
+          <!-- Pagination y botones -->
+          <div class="swiper-pagination"></div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
         </div>
       </section>
 
@@ -352,6 +464,14 @@
         mirror: true, // Re-anima al volver a subir
       });
     </script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
 
     <script>
       const hamburger = document.getElementById("hamburger");
@@ -376,10 +496,13 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-      const swiper = new Swiper(".swiper", {
-        loop: true,
+      const swiper = new Swiper(".mySwiper", {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 30,
         autoplay: {
-          delay: 10000,
+          delay: 6000,
+          disableOnInteraction: false,
         },
         pagination: {
           el: ".swiper-pagination",
